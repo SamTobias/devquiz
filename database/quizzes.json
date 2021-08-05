@@ -1,0 +1,31 @@
+[
+  {
+    "title": "Gerenciamento de stados",
+    "imagem": "blocks",
+    "questionsAnswered": 1,
+    "level": "facil",
+    "question": [
+      {
+        "title": "Qual a função para alterar estado?",
+        "answers": [
+          {
+            "title": "setState",
+            "isRight": true
+          },
+          {
+            "title": "getState",
+            "isRight": false
+          },
+          {
+            "title": "betState",
+            "isRight": false
+          },
+          {
+            "title": "letState",
+            "isRight": false
+          }
+        ]
+      }
+    ]
+  }
+]
