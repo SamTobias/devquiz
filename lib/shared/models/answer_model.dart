@@ -9,7 +9,7 @@ class AnswerModel {
   factory AnswerModel.fromMap(Map<String, dynamic> map) {
     return new AnswerModel(
       title: map['title'] as String,
-      isRight: map['isRight'] as bool,
+      isRight: map['isRight'] as bool? ?? false,
     );
   }
 

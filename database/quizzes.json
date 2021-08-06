@@ -1,7 +1,33 @@
 [
   {
-    "title": "Gerenciamento de stados",
-    "imagem": "blocks",
+    "title": "Gerenciamento de estados",
+    "imagem": "assets/images/data.png",
+    "questionsAnswered": 0,
+    "level": "facil",
+    "question": [
+      {
+        "title": "Qual a função para alterar estado?",
+        "answers": [
+          {
+            "title": "setState",
+            "isRight": true
+          },
+          {
+            "title": "getState"
+          },
+          {
+            "title": "betState"
+          },
+          {
+            "title": "letState"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Criação de telas",
+    "imagem": "assets/images/blocks.png",
     "questionsAnswered": 1,
     "level": "facil",
     "question": [
@@ -13,16 +39,65 @@
             "isRight": true
           },
           {
-            "title": "getState",
-            "isRight": false
+            "title": "getState"
           },
           {
-            "title": "betState",
-            "isRight": false
+            "title": "betState"
           },
           {
-            "title": "letState",
-            "isRight": false
+            "title": "letState"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Tipos de widgets disponíveis no Flutter",
+    "imagem": "assets/images/hierarchy.png",
+    "questionsAnswered": 1,
+    "level": "facil",
+    "question": [
+      {
+        "title": "Qual a função para alterar estado?",
+        "answers": [
+          {
+            "title": "setState",
+            "isRight": true
+          },
+          {
+            "title": "getState"
+          },
+          {
+            "title": "betState"
+          },
+          {
+            "title": "letState"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Gerenciamento de estados",
+    "imagem": "assets/images/laptop.png",
+    "questionsAnswered": 1,
+    "level": "facil",
+    "question": [
+      {
+        "title": "Qual a função para alterar estado?",
+        "answers": [
+          {
+            "title": "setState",
+            "isRight": true
+          },
+          {
+            "title": "getState"
+          },
+          {
+            "title": "betState"
+          },
+          {
+            "title": "letState"
           }
         ]
       }

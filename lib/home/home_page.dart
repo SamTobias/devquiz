@@ -37,6 +37,7 @@ class _HomePageState extends State<HomePage> {
       );
     }
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBarWidget(user: controller.user!),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -53,14 +54,17 @@ class _HomePageState extends State<HomePage> {
             ),
             SizedBox(height: 24),
             Expanded(
-                child: GridView.count(
-              crossAxisSpacing: 8,
-              mainAxisSpacing: 8,
-              crossAxisCount: 2,
-              children: controller.quizzes!
-                  .map((e) => QuizCardWidget(quiz: e))
-                  .toList(),
-            ))
+              child: GridView.count(
+                childAspectRatio: MediaQuery.of(context).size.width /
+                  (MediaQuery.of(context).size.height / 1.6),
+                crossAxisSpacing: 8,
+                mainAxisSpacing: 8,
+                crossAxisCount: 2,
+                children: controller.quizzes!
+                .map((e) => QuizCardWidget(quiz: e))
+                .toList(),
+              ),
+            )
           ],
         ),
       ),

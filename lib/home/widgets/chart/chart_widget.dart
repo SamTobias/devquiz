@@ -8,6 +8,7 @@ class ChartWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      constraints: BoxConstraints.tight(Size(80, 80)),
       height: 80,
       width: 80,
       child: Stack(
@@ -22,7 +23,11 @@ class ChartWidget extends StatelessWidget {
               valueColor: AlwaysStoppedAnimation<Color>(AppColors.chartPrimary),
             ),
           ),
-          Center(child: Text("75%", style: AppTextStyles.heading,))
+          Center(
+              child: Text(
+            "75%",
+            style: AppTextStyles.heading,
+          ))
         ],
       ),
     );

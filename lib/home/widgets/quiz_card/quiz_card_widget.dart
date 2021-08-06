@@ -29,9 +29,12 @@ class QuizCardWidget extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Text(
-            quiz.title,
-            style: AppTextStyles.heading15,
+          Expanded(
+            child: Text(
+              quiz.title,
+              overflow: TextOverflow.fade,
+              style: AppTextStyles.heading15,
+            ),
           ),
           SizedBox(
             height: 20,
