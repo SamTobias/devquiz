@@ -1,3 +1,4 @@
+import 'package:dev_quiz/challenge/challenge_page.dart';
 import 'package:dev_quiz/core/app_colors.dart';
 import 'package:dev_quiz/home/home_controller.dart';
 import 'package:dev_quiz/home/home_state.dart';
@@ -56,13 +57,19 @@ class _HomePageState extends State<HomePage> {
             Expanded(
               child: GridView.count(
                 childAspectRatio: MediaQuery.of(context).size.width /
-                  (MediaQuery.of(context).size.height / 1.6),
+                    (MediaQuery.of(context).size.height / 1.6),
                 crossAxisSpacing: 8,
                 mainAxisSpacing: 8,
                 crossAxisCount: 2,
                 children: controller.quizzes!
-                .map((e) => QuizCardWidget(quiz: e))
-                .toList(),
+                    .map((quiz) => QuizCardWidget(
+                          quiz: quiz,
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ChallengePage(questions: quiz.questions,))),
+                        ))
+                    .toList(),
               ),
             )
           ],

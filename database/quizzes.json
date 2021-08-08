@@ -4,7 +4,25 @@
     "imagem": "assets/images/data.png",
     "questionsAnswered": 0,
     "level": "facil",
-    "question": [
+    "questions": [
+      {
+        "title": "Qual a função para alterar estado?",
+        "answers": [
+          {
+            "title": "setState",
+            "isRight": true
+          },
+          {
+            "title": "getState"
+          },
+          {
+            "title": "betState"
+          },
+          {
+            "title": "letState"
+          }
+        ]
+      },
       {
         "title": "Qual a função para alterar estado?",
         "answers": [
@@ -30,7 +48,7 @@
     "imagem": "assets/images/blocks.png",
     "questionsAnswered": 1,
     "level": "facil",
-    "question": [
+    "questions": [
       {
         "title": "Qual a função para alterar estado?",
         "answers": [
@@ -56,7 +74,7 @@
     "imagem": "assets/images/hierarchy.png",
     "questionsAnswered": 1,
     "level": "facil",
-    "question": [
+    "questions": [
       {
         "title": "Qual a função para alterar estado?",
         "answers": [
@@ -82,7 +100,7 @@
     "imagem": "assets/images/laptop.png",
     "questionsAnswered": 1,
     "level": "facil",
-    "question": [
+    "questions": [
       {
         "title": "Qual a função para alterar estado?",
         "answers": [

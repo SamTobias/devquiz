@@ -16,14 +16,14 @@ extension LevelStringExt on String {
 
 class QuizModel {
   final String title;
-  final List<QuestionModel> question;
+  final List<QuestionModel> questions;
   final int questionsAnswered;
   final String imagem;
   final Level level;
 
   QuizModel(
       {required this.title,
-      required this.question,
+      required this.questions,
       this.questionsAnswered = 0,
       required this.imagem,
       required this.level});
@@ -31,7 +31,7 @@ class QuizModel {
   factory QuizModel.fromMap(Map<String, dynamic> map) {
     return new QuizModel(
       title: map['title'] as String,
-      question: List<QuestionModel>.from(map['question']?.map((question) => QuestionModel.fromMap(question))),
+      questions: List<QuestionModel>.from(map['questions']?.map((question) => QuestionModel.fromMap(question))),
       questionsAnswered: map['questionsAnswered'] as int,
       imagem: map['imagem'] as String,
       level: map['level'].toString().levelParse,

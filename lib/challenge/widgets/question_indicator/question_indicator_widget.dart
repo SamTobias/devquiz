@@ -3,7 +3,9 @@ import 'package:dev_quiz/shared/widgets/progress_indicator/progress_indicator_wi
 import 'package:flutter/material.dart';
 
 class QuestionIndicatorWidget extends StatelessWidget {
-  const QuestionIndicatorWidget({Key? key}) : super(key: key);
+  final int currentQuestion;
+  final int amountOfQuestions;
+  const QuestionIndicatorWidget({Key? key, required this.currentQuestion, required this.amountOfQuestions}) : assert(currentQuestion <= amountOfQuestions && amountOfQuestions > 0), super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,18 +13,17 @@ class QuestionIndicatorWidget extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16),
       child: Column(
         children: [
-
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Questão 04", style: AppTextStyles.body),
-              Text("de 10", style: AppTextStyles.body),
+              Text("Questão $currentQuestion", style: AppTextStyles.body),
+              Text("de $amountOfQuestions", style: AppTextStyles.body),
             ],
           ),
           SizedBox(
             height: 24,
           ),
-          ProgressIndicatorWidget(value: 0.4)
+          ProgressIndicatorWidget(value: currentQuestion / amountOfQuestions)
         ],
       ),
     );
