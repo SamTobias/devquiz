@@ -50,6 +50,7 @@ class ResultPage extends StatelessWidget {
                 ),
               ],
             ),
+            // TODO: Fix buttons layouts
             Column(
               children: [
                 NextButtonWidget(
