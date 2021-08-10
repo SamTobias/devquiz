@@ -24,20 +24,20 @@
         ]
       },
       {
-        "title": "Qual a função para alterar estado?",
+        "title": "Como ser notificado de alteração de estado?",
         "answers": [
           {
-            "title": "setState",
+            "title": "ValueNotifier",
             "isRight": true
           },
           {
-            "title": "getState"
+            "title": "PageNotifier"
           },
           {
-            "title": "betState"
+            "title": "VarNotifier"
           },
           {
-            "title": "letState"
+            "title": "DataNotifier"
           }
         ]
       }

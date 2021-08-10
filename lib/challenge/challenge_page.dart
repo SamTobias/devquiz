@@ -2,13 +2,16 @@ import 'package:dev_quiz/challenge/challenge_controller.dart';
 import 'package:dev_quiz/challenge/widgets/next_button/next_button_widget.dart';
 import 'package:dev_quiz/challenge/widgets/question_indicator/question_indicator_widget.dart';
 import 'package:dev_quiz/challenge/widgets/quiz/quiz_widget.dart';
+import 'package:dev_quiz/result/result_page.dart';
 import 'package:dev_quiz/shared/models/question_model.dart';
 import 'package:flutter/material.dart';
 
 class ChallengePage extends StatefulWidget {
   final List<QuestionModel> questions;
+  final String title;
 
-  const ChallengePage({Key? key, required this.questions}) : super(key: key);
+  const ChallengePage({Key? key, required this.questions, required this.title})
+      : super(key: key);
 
   @override
   _ChallengePageState createState() => _ChallengePageState();
@@ -24,7 +27,7 @@ class _ChallengePageState extends State<ChallengePage> {
       setState(() {});
     });
     pageController.addListener(() {
-      controller.currentPage = pageController.page!.toInt();
+      controller.currentPage = pageController.page!.toInt() + 1;
     });
     super.initState();
   }
@@ -42,17 +45,21 @@ class _ChallengePageState extends State<ChallengePage> {
                   BackButton(),
                   ValueListenableBuilder<int>(
                       valueListenable: controller.currentPageNotifier,
-                      builder: (context, value, _) =>
-                          QuestionIndicatorWidget(
-                              currentQuestion: controller.currentPage + 1,
-                              amountOfQuestions: widget.questions.length)),
+                      builder: (context, value, _) => QuestionIndicatorWidget(
+                          currentQuestion: controller.currentPage,
+                          amountOfQuestions: widget.questions.length)),
                 ],
               ))),
       body: PageView(
         controller: pageController,
         physics: NeverScrollableScrollPhysics(),
         children: widget.questions
-            .map((question) => QuizWidget(question: question))
+            .map((question) => QuizWidget(
+                question: question,
+                onSelectAnswer: (isRight) {
+                  if (isRight) controller.rightAnswers++;
+                  if (!isLastQuestion()) nextQuestion();
+                }))
             .toList(),
       ),
       bottomNavigationBar: SafeArea(
@@ -60,12 +67,15 @@ class _ChallengePageState extends State<ChallengePage> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Expanded(
-                child: NextButtonWidget(
-                  label: isLastQuestion() ? "Confirmar" : "Pular",
-                  isPrimary: isLastQuestion(),
-                  onTap: () => isLastQuestion() ? finishQuiz() : nextQuestion(),
-                ))
+            ValueListenableBuilder<int>(
+                valueListenable: controller.currentPageNotifier,
+                builder: (context, value, _) => Expanded(
+                        child: NextButtonWidget(
+                      label: isLastQuestion() ? "Confirmar" : "Pular",
+                      isPrimary: isLastQuestion(),
+                      onTap: () =>
+                          isLastQuestion() ? finishQuiz() : nextQuestion(),
+                    )))
           ],
         ),
       ),
@@ -74,11 +84,17 @@ class _ChallengePageState extends State<ChallengePage> {
 
   bool isLastQuestion() => controller.currentPage == widget.questions.length;
 
-  Future<void> nextQuestion() =>
-      pageController.nextPage(
-          duration: Duration(milliseconds: 500), curve: Curves.ease);
+  Future<void> nextQuestion() => pageController.nextPage(
+      duration: Duration(milliseconds: 500), curve: Curves.ease);
 
   void finishQuiz() {
-    Navigator.pop(context);
+    Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+            builder: (context) => ResultPage(
+                  rightAnswers: controller.rightAnswers,
+                  title: widget.title,
+                  amountOfQuestions: widget.questions.length,
+                )));
   }
 }

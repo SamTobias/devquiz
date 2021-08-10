@@ -6,8 +6,9 @@ import 'package:flutter/material.dart';
 
 class QuizWidget extends StatefulWidget {
   final QuestionModel question;
+  final void Function(bool isRight) onSelectAnswer;
 
-  const QuizWidget({Key? key, required this.question}) : super(key: key);
+  const QuizWidget({Key? key, required this.question, required this.onSelectAnswer}) : super(key: key);
 
   @override
   _QuizWidgetState createState() => _QuizWidgetState();
@@ -47,6 +48,7 @@ class _QuizWidgetState extends State<QuizWidget> {
                   setState(() {
                     answerIndexSelected = i;
                   });
+                  Future.delayed(Duration(seconds: 1)).then((value) => widget.onSelectAnswer(answers[i].isRight));
                 }
               },
             )
