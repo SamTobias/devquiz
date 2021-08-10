@@ -27,10 +27,6 @@
         "title": "Como ser notificado de alteração de estado?",
         "answers": [
           {
-            "title": "ValueNotifier",
-            "isRight": true
-          },
-          {
             "title": "PageNotifier"
           },
           {
@@ -38,17 +34,129 @@
           },
           {
             "title": "DataNotifier"
+          },
+          {
+            "title": "ValueNotifier",
+            "isRight": true
+          }
+        ]
+      },
+      {
+        "title": "Qual widget que escuta a alteração de estado de um valor?",
+        "answers": [
+          {
+            "title": "ValueListenBuilder"
+          },
+          {
+            "title": "ValueListenableBuilder",
+            "isRight": true
+          },
+          {
+            "title": "ValueListenable"
+          },
+          {
+            "title": "ListenableBuilder"
           }
         ]
       }
     ]
   },
   {
-    "title": "Criação de telas",
+    "title": "Construção de layout",
     "imagem": "assets/images/blocks.png",
-    "questionsAnswered": 1,
+    "questionsAnswered": 3,
     "level": "facil",
     "questions": [
+      {
+        "title": "Qual a função para alterar estado?",
+        "answers": [
+          {
+            "title": "setState",
+            "isRight": true
+          },
+          {
+            "title": "getState"
+          },
+          {
+            "title": "betState"
+          },
+          {
+            "title": "letState"
+          }
+        ]
+      },
+      {
+        "title": "Qual a função para alterar estado?",
+        "answers": [
+          {
+            "title": "setState",
+            "isRight": true
+          },
+          {
+            "title": "getState"
+          },
+          {
+            "title": "betState"
+          },
+          {
+            "title": "letState"
+          }
+        ]
+      },
+      {
+        "title": "Qual a função para alterar estado?",
+        "answers": [
+          {
+            "title": "setState",
+            "isRight": true
+          },
+          {
+            "title": "getState"
+          },
+          {
+            "title": "betState"
+          },
+          {
+            "title": "letState"
+          }
+        ]
+      },
+      {
+        "title": "Qual a função para alterar estado?",
+        "answers": [
+          {
+            "title": "setState",
+            "isRight": true
+          },
+          {
+            "title": "getState"
+          },
+          {
+            "title": "betState"
+          },
+          {
+            "title": "letState"
+          }
+        ]
+      },
+      {
+        "title": "Qual a função para alterar estado?",
+        "answers": [
+          {
+            "title": "setState",
+            "isRight": true
+          },
+          {
+            "title": "getState"
+          },
+          {
+            "title": "betState"
+          },
+          {
+            "title": "letState"
+          }
+        ]
+      },
       {
         "title": "Qual a função para alterar estado?",
         "answers": [
@@ -70,11 +178,47 @@
     ]
   },
   {
-    "title": "Tipos de widgets disponíveis no Flutter",
+    "title": "Navegação entre telas",
     "imagem": "assets/images/hierarchy.png",
-    "questionsAnswered": 1,
+    "questionsAnswered": 3,
     "level": "facil",
     "questions": [
+      {
+        "title": "Qual a função para alterar estado?",
+        "answers": [
+          {
+            "title": "setState",
+            "isRight": true
+          },
+          {
+            "title": "getState"
+          },
+          {
+            "title": "betState"
+          },
+          {
+            "title": "letState"
+          }
+        ]
+      },
+      {
+        "title": "Qual a função para alterar estado?",
+        "answers": [
+          {
+            "title": "setState",
+            "isRight": true
+          },
+          {
+            "title": "getState"
+          },
+          {
+            "title": "betState"
+          },
+          {
+            "title": "letState"
+          }
+        ]
+      },
       {
         "title": "Qual a função para alterar estado?",
         "answers": [
@@ -96,11 +240,65 @@
     ]
   },
   {
-    "title": "Gerenciamento de estados",
+    "title": "Programando em Dart",
     "imagem": "assets/images/laptop.png",
-    "questionsAnswered": 1,
+    "questionsAnswered": 4,
     "level": "facil",
     "questions": [
+      {
+        "title": "Qual a função para alterar estado?",
+        "answers": [
+          {
+            "title": "setState",
+            "isRight": true
+          },
+          {
+            "title": "getState"
+          },
+          {
+            "title": "betState"
+          },
+          {
+            "title": "letState"
+          }
+        ]
+      },
+      {
+        "title": "Qual a função para alterar estado?",
+        "answers": [
+          {
+            "title": "setState",
+            "isRight": true
+          },
+          {
+            "title": "getState"
+          },
+          {
+            "title": "betState"
+          },
+          {
+            "title": "letState"
+          }
+        ]
+      },
+      {
+        "title": "Qual a função para alterar estado?",
+        "answers": [
+          {
+            "title": "setState",
+            "isRight": true
+          },
+          {
+            "title": "getState"
+          },
+          {
+            "title": "betState"
+          },
+          {
+            "title": "letState"
+          }
+        ]
+      },
       {
         "title": "Qual a função para alterar estado?",
         "answers": [

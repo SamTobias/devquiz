@@ -18,7 +18,7 @@ class ScoreCardWidget extends StatelessWidget {
         decoration: BoxDecoration(
             color: AppColors.white, borderRadius: BorderRadius.circular(20)),
         child: Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
-          Expanded(flex: 1, child: ChartWidget(percent: .75)),
+          Expanded(flex: 1, child: ChartWidget(percent: percent)),
           Expanded(
               flex: 3,
               child: Padding(
