@@ -7,16 +7,18 @@ class NextButtonWidget extends StatelessWidget {
   final bool isPrimary;
   final VoidCallback onTap;
 
-  NextButtonWidget({required this.label, this.isPrimary = false, required this.onTap});
+  NextButtonWidget(
+      {required this.label, this.isPrimary = false, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.maxFinite,
       padding: EdgeInsets.all(8.0),
-      height: 48,
       child: TextButton(
         style: ButtonStyle(
-          overlayColor: MaterialStateProperty.all(isPrimary ? AppColors.green : AppColors.lightGrey),
+          overlayColor: MaterialStateProperty.all(
+              isPrimary ? AppColors.green : AppColors.lightGrey),
           backgroundColor: MaterialStateProperty.all(
               isPrimary ? AppColors.darkGreen : AppColors.white),
           side: MaterialStateProperty.all(BorderSide(
@@ -26,12 +28,15 @@ class NextButtonWidget extends StatelessWidget {
           ),
         ),
         onPressed: onTap,
-        child: Text(
-          label,
-          style: GoogleFonts.notoSans(
-              fontWeight: FontWeight.w600,
-              fontSize: 15,
-              color: isPrimary ? AppColors.white : Colors.black54),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            label,
+            style: GoogleFonts.notoSans(
+                fontWeight: FontWeight.w600,
+                fontSize: 15,
+                color: isPrimary ? AppColors.white : Colors.black54),
+          ),
         ),
       ),
     );

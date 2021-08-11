@@ -20,7 +20,7 @@ class ResultPage extends StatelessWidget {
     return Scaffold(
       body: Container(
         width: double.maxFinite,
-        padding: EdgeInsets.only(top: 130),
+        padding: EdgeInsets.only(top: 130, left: 40, right: 40),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -50,7 +50,6 @@ class ResultPage extends StatelessWidget {
                 ),
               ],
             ),
-            // TODO: Fix buttons layouts
             Column(
               children: [
                 NextButtonWidget(
@@ -59,7 +58,6 @@ class ResultPage extends StatelessWidget {
                   onTap: () => Share.share(
                       "DevQuiz NLW 5 - Flutter: Resultado do Quiz $title\nObtive $rightAnswers de $amountOfQuestions acertos"),
                 ),
-                SizedBox(height: 24),
                 NextButtonWidget(
                   label: "Voltar ao início",
                   isPrimary: false,
