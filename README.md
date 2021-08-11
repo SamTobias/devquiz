@@ -21,5 +21,5 @@ The app uses:
 
 # Download
 
-[Click here to download the app](./devquiz.apk)
+[Click here to download the app](https://github.com/SamTobias/devquiz/raw/main/devquiz.apk)
 
